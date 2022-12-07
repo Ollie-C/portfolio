@@ -1,0 +1,141 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.navbar {
+  width: 100%;
+  @include flex(row, space-between, center);
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+
+  &__logo {
+    @include flex(row, flex-start, center);
+
+    img {
+      width: 90px;
+      height: 20px;
+    }
+  }
+
+  &__links {
+    flex: 1;
+    @include flex(row, center, center);
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include flex(column, center, center);
+    margin: 0 1rem;
+    cursor: pointer;
+
+    &:hover {
+      div {
+        background-color: $secondary-colour;
+      }
+    }
+
+    div {
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: $primary-grey;
+      text-decoration: none;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $secondary-colour;
+      }
+    }
+  }
+
+  &__menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    @include flex(row, center, center);
+    background-color: $secondary-colour;
+
+    svg {
+      width: 70%;
+      height: 70%;
+      color: $primary-white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    div {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+      padding: 1rem;
+      width: 80%;
+      height: 100vh;
+      @include flex(column, flex-end, flex-end);
+      background: url("../../assets/Images/bgWhite.png");
+      background-color: $primary-white;
+      background-size: cover;
+      background-repeat: repeat;
+      box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+      svg {
+        width: 35px;
+        height: 35px;
+        color: $secondary-colour;
+        margin: 0.5rem 1rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        @include flex(column, flex-start, flex-start);
+
+        li {
+          margin: 1rem;
+
+          a {
+            color: $primary-grey;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-family: "DMSans-Bold";
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: $secondary-colour;
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 900px) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+}
