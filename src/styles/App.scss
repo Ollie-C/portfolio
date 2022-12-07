@@ -1,3 +1,112 @@
 @use "./partials/resets";
 @use "./partials/typology";
 @use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+.app {
+  background-color: $primary-colour;
+
+  &__whitebg {
+    background-color: $primary-white;
+  }
+
+  &__primarybg {
+    background-color: $primary-colour;
+  }
+
+  &__container {
+    width: 100%;
+    min-height: 100vh;
+    @include flex(row, flex-start, stretch);
+  }
+
+  &__flex {
+    @include flex(row, center, center);
+  }
+
+  &__wrapper {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  &__social {
+    @include flex(column, flex-end, center);
+    padding: 1rem;
+  }
+
+  &__social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $primary-white;
+    margin: 0.25rem 0;
+    border: 1px solid $primary-lgrey;
+    @include flex(row, center, center);
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      color: $primary-grey;
+    }
+
+    &:hover {
+      background-color: $secondary-colour;
+      border-color: $secondary-colour;
+
+      svg {
+        color: $primary-white;
+      }
+    }
+  }
+
+  &__navigation {
+    @include flex(column, center, center);
+    padding: 1rem;
+  }
+
+  &__navigation-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+    margin: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $secondary-colour;
+    }
+  }
+}
+
+.copyright {
+  width: 100%;
+  padding: 2rem 0 0;
+  @include flex(column, flex-end, flex-end);
+
+  p {
+    text-transform: uppercase;
+  }
+}
+
+.head-text {
+  font-size: 2.75rem;
+  font-family: "DMSans-Bold";
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.p-text {
+  font-size: 0.8rem;
+  text-align: left;
+  color: $primary-grey;
+  line-height: 1.5;
+}
+
+.bold-text {
+  font-size: 1rem;
+  font-family: "DMSans-Bold";
+  text-align: left;
+}
