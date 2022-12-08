@@ -1,0 +1,146 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.projects {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+.portfolio {
+  &__filter {
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    margin: 4rem 0 2rem;
+
+    .item-active {
+      background-color: $secondary-colour;
+      color: $primary-white;
+    }
+  }
+
+  &__filter-item {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-color: $primary-white;
+    color: $primary-black;
+    font-family: "DMSans-Bold";
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem;
+    &:hover {
+      background-color: $secondary-colour;
+      color: $primary-white;
+    }
+
+    @media screen and (min-width: 2000px) {
+      padding: 1.5rem 2rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__main {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @include flex(column, center, center);
+    width: 270px;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background-color: $primary-white;
+    color: $primary-black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    @media screen and (min-width: 2000px) {
+      width: 470px;
+      padding: 1.2rem;
+      border-radius: 0.75rem;
+    }
+
+    @media screen and (max-width: 300px) {
+      width: 100%;
+      margin: 1rem;
+    }
+  }
+
+  &__img {
+    @include flex(row, center, center);
+    width: 100%;
+    height: 230px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+
+    @media screen and (min-width: 2000px) {
+      height: 350px;
+    }
+  }
+
+  &__hover {
+    @include flex(row, center, center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  &__link {
+    @include flex(row, center, center);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $primary-white;
+    margin: 1rem;
+    font-family: "DMSans-Bold";
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 50%;
+      height: 50%;
+      color: $primary-white;
+    }
+  }
+
+  &__content {
+    padding: 0.8rem;
+    width: 100%;
+    position: relative;
+    @include flex(column, center, center);
+
+    h4 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: $primary-white;
+    top: -22px;
+  }
+}
