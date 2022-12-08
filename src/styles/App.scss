@@ -29,7 +29,7 @@
 
   &__social {
     @include flex(column, flex-end, center);
-    padding: 1rem;
+    padding: 2rem;
   }
 
   &__social-icon {
@@ -37,7 +37,7 @@
     height: 40px;
     border-radius: 50%;
     background-color: $primary-white;
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
     border: 1px solid $primary-lgrey;
     @include flex(row, center, center);
     transition: all 0.3s ease-in-out;
