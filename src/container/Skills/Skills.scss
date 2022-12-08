@@ -4,7 +4,7 @@
 .app__skills {
   flex: 1;
   width: 100%;
-  flex-direction: column;
+  @include flex(column, center, center);
 }
 
 .skills {
@@ -23,7 +23,6 @@
     flex: 1;
     @include flex(row, center, center);
     flex-wrap: wrap;
-    margin-right: 5rem;
     padding: 2rem 0;
     @media screen and (max-width: 900px) {
       margin-right: 0;
@@ -40,8 +39,8 @@
 
     div {
       @include flex(row, center, center);
-      width: 90px;
-      height: 90px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       background-color: $primary-white;
 
@@ -68,6 +67,7 @@
     p {
       font-family: "DMSans-Bold";
       margin-top: 0.5rem;
+      font-size: 1.4rem;
     }
 
     @media screen and (min-width: 2000px) {

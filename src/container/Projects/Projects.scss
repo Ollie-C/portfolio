@@ -1,10 +1,10 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.projects {
+.app__projects {
   flex: 1;
   width: 100%;
-  flex-direction: column;
+  @include flex(column, center, center);
 }
 
 .portfolio {
