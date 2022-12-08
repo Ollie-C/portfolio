@@ -58,7 +58,7 @@ const Projects = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="portfolio__main"
       >
-        {filteredProjects.map((project, index) => (
+        {filteredProjects?.map((project, index) => (
           <div className="portfolio__item" key={index}>
             <div className="portfolio__img">
               <img src={urlFor(project.imgUrl)} alt={project.name} />
@@ -109,4 +109,4 @@ const Projects = () => {
   );
 };
 
-export default AppWrap(Projects, "Projects");
+export default AppWrap(Projects, "projects");
