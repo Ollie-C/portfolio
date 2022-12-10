@@ -21,6 +21,29 @@
     }
   }
 
+  &__cv {
+    @include flex(row, center, center);
+    background-color: $primary-colour;
+    border: 1px solid $primary-grey;
+    padding: 4px 1rem;
+    border-radius: 15px;
+    &:hover {
+      cursor: pointer;
+      background-color: $primary-grey;
+      color: $primary-white;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.5rem;
+    }
+  }
+
   &__links {
     flex: 1;
     @include flex(row, center, center);

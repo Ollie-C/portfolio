@@ -19,9 +19,8 @@ import about04 from "../assets/Images/about04.png";
 import bgIMG from "../assets/Images/bgIMG.png";
 import bgWhite from "../assets/Images/bgWhite.png";
 import circle from "../assets/Images/circle.svg";
-import logo from "../assets/Images/logo.png";
 import mobile from "../assets/Images/mobile.png";
-import profile from "../assets/Images/profile.png";
+import splash from "../assets/Images/splash.jpg";
 
 export default {
   api,
@@ -42,7 +41,6 @@ export default {
   bgIMG,
   bgWhite,
   circle,
-  logo,
   mobile,
-  profile,
+  splash,
 };

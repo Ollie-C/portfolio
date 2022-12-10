@@ -3,6 +3,7 @@ import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../static";
 import { AppWrap } from "../../wrapper";
+import { HiChevronDoubleDown } from "react-icons/hi";
 
 const scaleVariants = {
   whileInView: {
@@ -25,9 +26,8 @@ const Header = () => {
       >
         <div className="header__badge">
           <div className="badge-cmp">
-            <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I'm</p>
+              <p className="p-text">Hey, I'm</p>
               <h1 className="head-text">Ollie</h1>
             </div>
           </div>
@@ -35,13 +35,36 @@ const Header = () => {
             <p className="p-text">Full-stack Web Developer</p>
           </div>
         </div>
+        <motion.div
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ delay: 2, duration: 2 }}
+          className="header__info"
+        >
+          <div className="header__badge">
+            <div className="tag-cmp">
+              <h3>Why did I invite you here?</h3>
+              <p className="p-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                ullam necessitatibus. Beatae, expedita! Ut ducimus nobis, quos
+                quod blanditiis.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ delay: 4, duration: 2 }}
+          className="header__info"
+        >
+          <HiChevronDoubleDown href="#about" className="header__button" />
+        </motion.div>
       </motion.div>
-      <motion.div
+
+      {/* <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 2, delayChildren: 0.5 }}
         className="header__img"
       >
-        <img src={images.profile} alt="profile-image" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -60,7 +83,7 @@ const Header = () => {
             <img src={circle} alt="circle" />
           </div>
         ))}
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };

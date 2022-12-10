@@ -6,7 +6,7 @@ import { urlFor, client } from "../../client";
 import "./Projects.scss";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Featured");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -16,7 +16,8 @@ const Projects = () => {
 
     client.fetch(query).then((data) => {
       setProjects(data);
-      setFilteredProjects(data);
+      const featured = data.filter((result) => result.featured == true);
+      setFilteredProjects(featured);
     });
   }, []);
 
@@ -27,6 +28,10 @@ const Projects = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
       if (item === "All") {
         setFilteredProjects(projects);
+      } else if (item === "Featured") {
+        setFilteredProjects(
+          projects.filter((project) => project.featured == true)
+        );
       } else {
         setFilteredProjects(
           projects.filter((project) => project.tags.includes(item))
@@ -38,20 +43,22 @@ const Projects = () => {
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span> section
+        My Everchanging <span>Portfolio</span>
       </h2>
       <div className="portfolio__filter">
-        {["React", "UI/UX", "Web App", "All"].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleProjectFilter(item)}
-            className={`portfolio__filter-item p-text ${
-              activeFilter === item ? "item-active" : " "
-            }`}
-          >
-            {item}
-          </div>
-        ))}
+        {["Featured", "React", "Full-stack", "UI/UX", "Other", "All"].map(
+          (item, index) => (
+            <div
+              key={index}
+              onClick={() => handleProjectFilter(item)}
+              className={`portfolio__filter-item p-text ${
+                activeFilter === item ? "item-active" : " "
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
       <motion.div
         animate={animateCard}

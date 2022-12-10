@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { images } from "../../static";
 import "./Navbar.scss";
-import { HiMenuAlt4, HiX } from "react-icons/hi";
+import { HiMenuAlt4, HiX, HiFolderDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <img src={images.logo} alt="logo" />
+        <h2>OLLIE C.</h2>
       </div>
       <ul className="navbar__links">
         {["home", "about", "projects", "skills", "contact"].map((item) => (
@@ -20,6 +20,10 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <div className="navbar__cv">
+        <HiFolderDownload />
+        <h3>CV</h3>
+      </div>
 
       <div className="navbar__menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
