@@ -78,26 +78,34 @@ const Projects = () => {
                 }}
                 className="portfolio__hover"
               >
-                <a href={project.projectLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="portfolio__link"
+                {project.projectLink && (
+                  <a
+                    href={project.projectLink}
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <AiFillEye />
-                  </motion.div>
-                </a>
-                <a href={project.codeLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="portfolio__link"
-                  >
-                    <AiFillGithub />
-                  </motion.div>
-                </a>
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 0.9] }}
+                      transition={{ duration: 0.25 }}
+                      className="portfolio__link"
+                    >
+                      <AiFillEye />
+                    </motion.div>
+                  </a>
+                )}
+                {project.codeLink && (
+                  <a href={project.codeLink} target="_blank" rel="noreferrer">
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 0.9] }}
+                      transition={{ duration: 0.25 }}
+                      className="portfolio__link"
+                    >
+                      <AiFillGithub />
+                    </motion.div>
+                  </a>
+                )}
               </motion.div>
             </div>
             <div className="portfolio__content">

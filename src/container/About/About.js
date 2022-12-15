@@ -7,7 +7,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 const About = () => {
   const [abouts, setAbouts] = useState([]);
   useEffect(() => {
-    const query = '*[_type == "about"]';
+    const query = '*[_type == "about"] | order(order asc)';
     client.fetch(query).then((data) => setAbouts(data));
   }, []);
   return (

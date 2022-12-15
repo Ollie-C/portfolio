@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { urlFor, client } from "../../client";
+import { client } from "../../client";
 import "./Navbar.scss";
 import { HiMenuAlt4, HiX, HiFolderDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
@@ -17,7 +17,6 @@ const Navbar = () => {
     client
       .fetch(query)
       .then((data) => {
-        console.log(data);
         setCV(data);
       })
       .catch(console.error);

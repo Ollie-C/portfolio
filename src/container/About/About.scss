@@ -15,7 +15,7 @@
   &__item {
     width: 190px;
     @include flex(column, flex-start, flex-start);
-    margin: 2rem;
+    margin: 2rem 4rem;
 
     img {
       width: 100%;

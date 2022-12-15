@@ -7,10 +7,15 @@ const SocialMedia = () => {
       <a
         href="https://www.linkedin.com/in/oliver-cross/"
         className="app__social-icon"
+        target="_blank"
       >
         <BsLinkedin />
       </a>
-      <a href="https://github.com/Ollie-C" className="app__social-icon">
+      <a
+        href="https://github.com/Ollie-C"
+        className="app__social-icon"
+        target="_blank"
+      >
         <BsGithub />
       </a>
     </div>
