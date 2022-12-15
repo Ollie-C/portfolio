@@ -1,12 +1,27 @@
-import React, { useState } from "react";
-import { images } from "../../static";
+import React, { useEffect, useState } from "react";
+import { urlFor, client } from "../../client";
 import "./Navbar.scss";
 import { HiMenuAlt4, HiX, HiFolderDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [cv, setCV] = useState(null);
 
+  useEffect(() => {
+    const query = `*[_type == 'files'] {
+  
+      fileUrl,
+      "cvURL": fileUrl.asset->url}`;
+
+    client
+      .fetch(query)
+      .then((data) => {
+        console.log(data);
+        setCV(data);
+      })
+      .catch(console.error);
+  }, []);
   return (
     <nav className="navbar">
       <div className="navbar__logo">
@@ -20,11 +35,12 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div className="navbar__cv">
-        <HiFolderDownload />
-        <h3>CV</h3>
-      </div>
-
+      {cv && (
+        <a className="navbar__cv" href={`${cv[0].cvURL}?dl=`}>
+          <HiFolderDownload />
+          <h3>CV</h3>
+        </a>
+      )}
       <div className="navbar__menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
         {toggle && (

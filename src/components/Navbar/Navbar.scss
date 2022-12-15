@@ -23,7 +23,7 @@
 
   &__cv {
     @include flex(row, center, center);
-    background-color: $primary-colour;
+    color: $primary-black;
     border: 1px solid $primary-grey;
     padding: 4px 1rem;
     border-radius: 15px;
