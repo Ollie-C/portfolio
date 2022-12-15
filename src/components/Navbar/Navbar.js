@@ -24,10 +24,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <h2>OLLIE C.</h2>
+        <a href="#home">
+          <h2>OLLIE C.</h2>
+        </a>
       </div>
       <ul className="navbar__links">
-        {["home", "about", "projects", "skills", "contact"].map((item) => (
+        {["about", "projects", "skills", "contact"].map((item) => (
           <li className="navbar__link p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>

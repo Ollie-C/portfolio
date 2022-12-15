@@ -12,13 +12,8 @@
   position: fixed;
   z-index: 2;
 
-  &__logo {
-    @include flex(row, flex-start, center);
-
-    img {
-      width: 90px;
-      height: 20px;
-    }
+  @media screen and (max-width: 900px) {
+    padding: 1rem 4rem;
   }
 
   &__cv {
@@ -114,7 +109,7 @@
       width: 80%;
       height: 100vh;
       @include flex(column, flex-end, flex-end);
-      background: url("../../assets/Images/bgWhite.png");
+
       background-color: $primary-white;
       background-size: cover;
       background-repeat: repeat;
