@@ -4,7 +4,7 @@
 .navbar {
   width: 100%;
   @include flex(row, space-between, center);
-  padding: 1rem 2rem;
+  padding: 1rem 12rem;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -55,7 +55,7 @@
 
   &__link {
     @include flex(column, center, center);
-    margin: 0 1rem;
+    margin: 0 1.5rem;
     cursor: pointer;
 
     &:hover {
@@ -77,8 +77,9 @@
       text-decoration: none;
       flex-direction: column;
       text-transform: uppercase;
-      font-weight: 500;
+
       transition: all 0.3s ease-in-out;
+      margin-top: 1rem;
 
       &:hover {
         color: $secondary-colour;

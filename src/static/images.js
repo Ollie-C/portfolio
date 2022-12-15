@@ -10,6 +10,7 @@ import python from "../assets/Icons/python.png";
 import react from "../assets/Icons/react.png";
 import sass from "../assets/Icons/sass.png";
 import typescript from "../assets/Icons/typescript.png";
+import next from "../assets/Icons/next2.png";
 
 //Images
 import about01 from "../assets/Images/about01.png";
@@ -21,6 +22,8 @@ import bgWhite from "../assets/Images/bgWhite.png";
 import circle from "../assets/Images/circle.svg";
 import mobile from "../assets/Images/mobile.png";
 import splash from "../assets/Images/splash.jpg";
+import tokyo from "../assets/Images/tokyo.jpg";
+import environment from "../assets/Images/environment.jpg";
 
 export default {
   api,
@@ -43,4 +46,7 @@ export default {
   circle,
   mobile,
   splash,
+  next,
+  tokyo,
+  environment,
 };

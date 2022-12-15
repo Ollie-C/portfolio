@@ -13,8 +13,8 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        Connecting <span>Creative Development</span>
-        <br /> with <span>Effective Altruism</span>
+        Making a <span>Difference</span>
+        <br /> with <span>Creative Development</span>
       </h2>
       <section className="profiles">
         {abouts.map((about, index) => (

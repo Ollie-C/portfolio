@@ -3,11 +3,12 @@
 
 #home {
   position: relative;
-  // background: url("../../assets/Images/bgIMG.png");
+  background: url("../../assets/BgOptions/4.JPG");
   background-size: cover;
-  background-repeat: repeat;
   background-position: center;
   background-color: rgb(237, 237, 237);
+
+  background-blend-mode: screen;
 
   .app__wrapper {
     padding: 0;
@@ -19,11 +20,10 @@
 
 .header {
   @include flex(row, center, center);
-
   flex: 1;
   width: 100%;
   height: 100%;
-  padding: 6rem 2rem 0;
+  padding: 4rem 0;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -36,10 +36,11 @@
   }
 
   &__info {
-    flex: 0.65;
-    @include flex(column, flex-start, center);
+    z-index: 1;
+    flex: 0.75;
+    @include flex(column, center, center);
     height: 100%;
-    margin: 0rem 2rem;
+    margin: 4rem 0;
     padding: 2rem 0;
 
     @media screen and (max-width: 2000px) {
@@ -48,9 +49,33 @@
     }
   }
 
+  &__scroll {
+    position: absolute;
+    bottom: 6rem;
+    z-index: 1;
+  }
+
+  &__navdown {
+    border-radius: 15px;
+    @include flex(column, flex-end, center);
+    transition: all 1s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px inset;
+  }
+
+  &__button {
+    width: 45px;
+    height: 40px;
+    color: $secondary-colour;
+
+    &:hover {
+      cursor: pointer;
+      color: $primary-grey;
+    }
+  }
+
   &__badge {
     width: 100%;
-    @include flex(column, flex-end, flex-end);
+    @include flex(column, flex-end, flex-start);
     @media screen and (max-width: 1200px) {
       justify-content: flex-start;
       align-items: flex-start;
@@ -58,30 +83,48 @@
 
     .badge-cmp,
     .tag-cmp {
-      padding: 3rem 6rem;
+      background-color: rgba(255, 255, 255, 0.668);
+      padding: 3rem 4rem;
       border: $primary-white;
       border-radius: 15px;
-      flex-direction: row;
+      flex-direction: column;
       width: auto;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+      h1 {
+        font-size: 5.5rem;
+        color: $primary-black;
+        text-align: left;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
     }
 
     .tag-cmp {
       flex-direction: column;
       margin-top: 3rem;
+      text-align: left;
+
+      h3 {
+        align-self: flex-start;
+        padding: 1rem 0;
+      }
 
       p {
         width: 100%;
         text-transform: uppercase;
-        text-align: right;
+        text-align: left;
       }
     }
   }
 
   &__circles {
-    flex: 0.75;
-    @include flex(column, space-evenly, flex-start);
-    height: 100%;
+    z-index: 1;
+    flex: 0.5;
+    @include flex(column, space-evenly, center);
+    height: 80%;
     margin-left: 1rem;
 
     div {
@@ -90,16 +133,21 @@
       border-radius: 50%;
       background-color: $primary-white;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      &:hover {
+        scale: 0.9;
+      }
 
       img {
         width: 60%;
         height: 60%;
+        filter: gray;
       }
     }
 
     div:nth-child(1) {
       width: 80px;
       height: 80px;
+      margin-right: 5rem;
     }
     div:nth-child(2) {
       margin: 1.75rem;
@@ -109,6 +157,7 @@
     div:nth-child(3) {
       width: 70px;
       height: 70px;
+      margin-right: 5rem;
     }
 
     @media screen and (min-width: 2000px) {
@@ -157,6 +206,7 @@
       bottom: 0;
       z-index: 0;
       width: 100%;
+
       height: 90%;
     }
 

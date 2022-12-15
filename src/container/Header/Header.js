@@ -21,57 +21,40 @@ const Header = () => {
     <section className="header">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1 }}
         className="header__info"
       >
         <div className="header__badge">
           <div className="badge-cmp">
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hey, I'm</p>
-              <h1 className="head-text">Ollie</h1>
-            </div>
+            <h1 className="head-text">Hey, I'm Ollie.</h1>
           </div>
+
           <div className="tag-cmp">
-            <p className="p-text">Full-stack Web Developer</p>
+            <p className="p-text">a full-stack web developer</p>
           </div>
-        </div>
-        <motion.div
-          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-          transition={{ delay: 2, duration: 2 }}
-          className="header__info"
-        >
-          <div className="header__badge">
+          <motion.div
+            whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+            transition={{ delay: 2, duration: 1 }}
+          >
             <div className="tag-cmp">
-              <h3>Why did I invite you here?</h3>
               <p className="p-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                ullam necessitatibus. Beatae, expedita! Ut ducimus nobis, quos
-                quod blanditiis.
+                I'm a London-based developer with a minimalist approach to
+                building beautiful, seamless full-stack applications.
               </p>
             </div>
-          </div>
-        </motion.div>
-        <motion.div
-          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-          transition={{ delay: 4, duration: 2 }}
-          className="header__info"
-        >
-          <HiChevronDoubleDown href="#about" className="header__button" />
-        </motion.div>
+          </motion.div>
+        </div>
       </motion.div>
-
-      {/* <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 2, delayChildren: 0.5 }}
-        className="header__img"
+      <motion.div
+        whileInView={{ y: [-50, 0], opacity: [0, 1] }}
+        transition={{ delay: 2, duration: 1 }}
+        className="header__scroll"
       >
-        <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className="overlay_circle"
-          src={images.circle}
-          alt="profile-circle"
-        />
+        <div className="header__navdown">
+          <a href="#about">
+            <HiChevronDoubleDown className="header__button" />
+          </a>
+        </div>
       </motion.div>
       <motion.div
         variants={scaleVariants}
@@ -83,7 +66,7 @@ const Header = () => {
             <img src={circle} alt="circle" />
           </div>
         ))}
-      </motion.div> */}
+      </motion.div>
     </section>
   );
 };

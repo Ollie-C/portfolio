@@ -6,10 +6,12 @@ import { client } from "../../client";
 
 const Footer = () => {
   return (
-    <section className="footer">
-      <h1 className="head-text">Get in Touch!</h1>
-      <p className="p-text">iio.olivercross@gmail.com</p>
-    </section>
+    <>
+      <section className="footer">
+        <h1 className="head-text">I'd love to hear from you!</h1>
+        <p className="p-text">iio.olivercross@gmail.com</p>
+      </section>
+    </>
   );
 };
 

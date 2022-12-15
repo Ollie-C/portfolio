@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import { images } from "../../static";
+
 import "./Skills.scss";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "skills"]';
+    const query = '*[_type == "skills"] | order(priority asc)';
 
     client.fetch(query).then((data) => {
       setSkills(data);
@@ -33,6 +35,18 @@ const Skills = () => {
               <p className="p-text">{skill.name}</p>
             </motion.div>
           ))}
+          <div className="skills__learning">
+            <h3>Learning:</h3>
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              className="skills__item"
+            >
+              <div style={{ backgroundColor: "#f9fcff" }}>
+                <img src={images.next} alt="nextjs-icon" />
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </>

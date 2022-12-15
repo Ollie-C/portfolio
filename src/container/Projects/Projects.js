@@ -46,7 +46,7 @@ const Projects = () => {
         My Everchanging <span>Portfolio</span>
       </h2>
       <div className="portfolio__filter">
-        {["Featured", "React", "Full-stack", "UI/UX", "Other", "All"].map(
+        {["Featured", "React", "Full-stack", "Other", "All"].map(
           (item, index) => (
             <div
               key={index}
