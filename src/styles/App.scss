@@ -17,7 +17,7 @@
   &__container {
     width: 100%;
     min-height: 100vh;
-    @include flex(row, flex-start, stretch);
+    @include flex(row, center, center);
   }
 
   &__wrapper {
@@ -112,4 +112,27 @@
 
 span {
   color: $secondary-colour;
+}
+
+@media screen and (max-width: 600px) {
+  .app__container {
+    flex-direction: column;
+  }
+  .app__navigation {
+    display: none;
+  }
+
+  .app__social {
+    order: 2;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+
+  .copyright {
+    align-items: center;
+    text-align: center;
+    p {
+      font-size: 1.2rem;
+    }
+  }
 }

@@ -45,17 +45,7 @@ const Header = () => {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div
-        whileInView={{ y: [-50, 0], opacity: [0, 1] }}
-        transition={{ delay: 2, duration: 1 }}
-        className="header__scroll"
-      >
-        <div className="header__navdown">
-          <a href="#about">
-            <HiChevronDoubleDown className="header__button" />
-          </a>
-        </div>
-      </motion.div>
+
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
