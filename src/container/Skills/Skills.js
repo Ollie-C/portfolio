@@ -46,6 +46,15 @@ const Skills = () => {
                 <img src={images.next} alt="nextjs-icon" />
               </div>
             </motion.div>
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              className="skills__item"
+            >
+              <div style={{ backgroundColor: "#f9fcff" }}>
+                <img src={images.graphql} alt="graphql-icon" />
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

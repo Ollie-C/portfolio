@@ -1,5 +1,6 @@
 import React from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { SiCodewars } from "react-icons/si";
 
 const SocialMedia = () => {
   return (
@@ -17,6 +18,13 @@ const SocialMedia = () => {
         target="_blank"
       >
         <BsGithub />
+      </a>
+      <a
+        href="https://www.codewars.com/users/ori-x"
+        className="app__social-icon"
+        target="_blank"
+      >
+        <SiCodewars />
       </a>
     </div>
   );
