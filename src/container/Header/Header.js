@@ -19,6 +19,10 @@ const scaleVariants = {
 const Header = () => {
   return (
     <section className="header">
+      <div className="status">
+        <div className="status__circle"></div>
+        <p className="status__text">READY TO WORK ON SOMETHING INCREDIBLE</p>
+      </div>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
@@ -30,19 +34,17 @@ const Header = () => {
           </div>
 
           <div className="tag-cmp">
-            <p className="p-text">a full-stack web developer</p>
+            <p className="p-text">
+              I'm a London-based
+              <span className="p-text-bold"> software engineer</span> with a
+              passion for building beautiful, seamless full-stack applications.
+              . .
+            </p>
           </div>
-          <motion.div
-            whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 2, duration: 1 }}
-          >
-            <div className="tag-cmp">
-              <p className="p-text">
-                I'm a London-based developer with a minimalist approach to
-                building beautiful, seamless full-stack applications.
-              </p>
-            </div>
-          </motion.div>
+
+          <div className="tag-cmp">
+            <p className="p-text">and a love for the environment</p>
+          </div>
         </div>
       </motion.div>
 
@@ -51,7 +53,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="header__circles"
       >
-        {[images.node, images.react, images.python].map((circle, index) => (
+        {[images.react, images.node, images.python].map((circle, index) => (
           <div className="circle-cmp" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>
