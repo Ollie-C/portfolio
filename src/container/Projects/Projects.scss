@@ -48,6 +48,7 @@
   &__item {
     @include flex(column, center, center);
     width: 270px;
+    min-height: 400px;
     margin: 2rem;
     padding: 1rem;
     border-radius: 0.8rem;
@@ -148,4 +149,8 @@
       text-transform: uppercase;
     }
   }
+}
+
+.card-text {
+  font-size: 1.2rem;
 }

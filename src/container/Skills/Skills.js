@@ -37,22 +37,14 @@ const Skills = () => {
           ))}
           <div className="skills__learning">
             <h3>Learning:</h3>
+
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className="skills__item"
             >
               <div style={{ backgroundColor: "#f9fcff" }}>
-                <img src={images.next} alt="nextjs-icon" />
-              </div>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
-              className="skills__item"
-            >
-              <div style={{ backgroundColor: "#f9fcff" }}>
-                <img src={images.graphql} alt="graphql-icon" />
+                <img src={images.typescript} alt="typescript logo" />
               </div>
             </motion.div>
           </div>

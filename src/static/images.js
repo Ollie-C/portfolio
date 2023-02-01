@@ -13,6 +13,9 @@ import typescript from "../assets/Icons/typescript.png";
 import next from "../assets/Icons/next2.png";
 import graphql from "../assets/Icons/graphql.png";
 
+//logo
+import logo from "../assets/logo-new-no-bg.png";
+
 //Images
 import about01 from "../assets/Images/about01.png";
 import about02 from "../assets/Images/about02.png";
@@ -51,4 +54,5 @@ export default {
   tokyo,
   environment,
   graphql,
+  logo,
 };

@@ -110,7 +110,7 @@ const Projects = () => {
             </div>
             <div className="portfolio__content">
               <h4 className="bold-text">{project.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
+              <p className="p-text card-text" style={{ marginTop: 10 }}>
                 {project.description}
               </p>
               <div className="portfolio__tag">

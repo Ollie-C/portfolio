@@ -3,6 +3,7 @@ import { client } from "../../client";
 import "./Navbar.scss";
 import { HiMenuAlt4, HiX, HiFolderDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { images } from "../../static";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -26,6 +27,7 @@ const Navbar = () => {
       <div className="navbar__logo">
         <a href="#home">
           <h2>OLLIE C.</h2>
+          {/* <img className="ollie-logo" src={images.logo} alt="ollie logo" /> */}
         </a>
       </div>
       <ul className="navbar__links">

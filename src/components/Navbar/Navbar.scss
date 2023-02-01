@@ -24,8 +24,9 @@
     border-radius: 15px;
     &:hover {
       cursor: pointer;
-      background-color: $primary-grey;
-      color: $primary-white;
+      background-color: $secondary-colour;
+      color: $primary-colour;
+      border: none;
     }
 
     h3 {
@@ -80,6 +81,11 @@
         color: $secondary-colour;
       }
     }
+  }
+
+  &__logo {
+    width: 150px;
+    opacity: 70%;
   }
 
   &__menu {
@@ -157,4 +163,8 @@
       display: none;
     }
   }
+}
+
+.ollie-logo {
+  width: 100%;
 }

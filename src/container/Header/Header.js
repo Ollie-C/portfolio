@@ -30,15 +30,14 @@ const Header = () => {
       >
         <div className="header__badge">
           <div className="badge-cmp">
-            <h1 className="head-text">Hey, I'm Ollie.</h1>
+            <h1 className="head-text">Hey! I'm Ollie</h1>
           </div>
 
           <div className="tag-cmp">
             <p className="p-text">
               I'm a London-based
-              <span className="p-text-bold"> software engineer</span> with a
-              passion for building beautiful, seamless full-stack applications.
-              . .
+              <span className="p-text-bold"> full stack developer</span> with a
+              passion for building beautiful, seamless full-stack applications
             </p>
           </div>
 
