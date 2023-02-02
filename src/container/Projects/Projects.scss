@@ -47,9 +47,9 @@
 
   &__item {
     @include flex(column, center, center);
-    width: 270px;
-    min-height: 400px;
-    margin: 2rem;
+    width: 380px;
+    min-height: 450px;
+    margin: 1.5rem;
     padding: 1rem;
     border-radius: 0.8rem;
     background-color: $primary-white;
@@ -147,6 +147,28 @@
 
     p {
       text-transform: uppercase;
+    }
+  }
+
+  &__skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__skill {
+    text-align: center;
+    width: 40%;
+    background-color: $primary-colour;
+    color: $primary-grey;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0.5rem;
+
+    p {
+      font-size: 1rem;
+      font-weight: 100;
     }
   }
 }

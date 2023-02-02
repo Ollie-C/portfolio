@@ -19,6 +19,7 @@ const Projects = () => {
       const featured = data.filter((result) => result.featured == true);
       setFilteredProjects(featured);
     });
+    console.log(projects);
   }, []);
 
   const handleProjectFilter = (item) => {
@@ -116,6 +117,13 @@ const Projects = () => {
               <div className="portfolio__tag">
                 <p className="p-text">{project.tags[0]}</p>
               </div>
+            </div>
+            <div className="portfolio__skills">
+              {project.tags?.map((project, index) => (
+                <div className="portfolio__skill">
+                  <p>{project}</p>
+                </div>
+              ))}
             </div>
           </div>
         ))}
