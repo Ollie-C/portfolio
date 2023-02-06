@@ -119,9 +119,9 @@ const Projects = () => {
               </div>
             </div>
             <div className="portfolio__skills">
-              {project.tags?.map((project, index) => (
+              {project.tags?.map((skill, index) => (
                 <div className="portfolio__skill">
-                  <p>{project}</p>
+                  <p>{skill}</p>
                 </div>
               ))}
             </div>
