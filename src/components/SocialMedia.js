@@ -9,6 +9,7 @@ const SocialMedia = () => {
         href="https://www.linkedin.com/in/oliver-cross/"
         className="app__social-icon"
         target="_blank"
+        rel="noreferrer"
       >
         <BsLinkedin />
       </a>
@@ -16,6 +17,7 @@ const SocialMedia = () => {
         href="https://github.com/Ollie-C"
         className="app__social-icon"
         target="_blank"
+        rel="noreferrer"
       >
         <BsGithub />
       </a>
@@ -23,6 +25,7 @@ const SocialMedia = () => {
         href="https://www.codewars.com/users/ori-x"
         className="app__social-icon"
         target="_blank"
+        rel="noreferrer"
       >
         <SiCodewars />
       </a>

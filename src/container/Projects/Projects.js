@@ -16,10 +16,9 @@ const Projects = () => {
 
     client.fetch(query).then((data) => {
       setProjects(data);
-      const featured = data.filter((result) => result.featured == true);
+      const featured = data.filter((result) => result.featured === true);
       setFilteredProjects(featured);
     });
-    console.log(projects);
   }, []);
 
   const handleProjectFilter = (item) => {
@@ -31,7 +30,7 @@ const Projects = () => {
         setFilteredProjects(projects);
       } else if (item === "Featured") {
         setFilteredProjects(
-          projects.filter((project) => project.featured == true)
+          projects.filter((project) => project.featured === true)
         );
       } else {
         setFilteredProjects(
@@ -120,7 +119,7 @@ const Projects = () => {
             </div>
             <div className="portfolio__skills">
               {project.tags?.map((skill, index) => (
-                <div className="portfolio__skill">
+                <div key={index} className="portfolio__skill">
                   <p>{skill}</p>
                 </div>
               ))}

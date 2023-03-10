@@ -3,7 +3,6 @@ import { client } from "../../client";
 import "./Navbar.scss";
 import { HiMenuAlt4, HiX, HiFolderDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { images } from "../../static";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);

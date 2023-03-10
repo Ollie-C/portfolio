@@ -44,7 +44,7 @@ const Skills = () => {
               className="skills__item"
             >
               <div style={{ backgroundColor: "#f9fcff" }}>
-                <img src={images.typescript} alt="typescript logo" />
+                <p>Testing in Cypress</p>
               </div>
             </motion.div>
           </div>
