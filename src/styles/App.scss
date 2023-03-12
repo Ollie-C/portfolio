@@ -64,18 +64,21 @@
 
   &__navigation {
     @include flex(column, center, center);
+    width: auto;
   }
 
   &__navigation-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    border: 1px solid $primary-grey;
+    background-color: $secondary-colour;
     margin: 0.5rem;
     transition: background-color 0.2s ease-in-out;
+    color: transparent;
 
     &:hover {
-      background-color: $secondary-colour;
+      background-color: $primary-colour;
     }
   }
 }

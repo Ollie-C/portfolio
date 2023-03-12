@@ -27,33 +27,16 @@ const Header = () => {
         transition={{ duration: 1 }}
         className="header__info"
       >
-        <div className="header__badge">
-          <div className="tag-cmp">
-            <h1 className="head-text">HEY, I'M OLLIE</h1>
-          </div>
-
-          <div className="tag-cmp">
-            <p className="p-text">
-              I'm a London-based
-              <span className="p-text-bold"> frontend developer</span> with a
-              passion for building beautiful, seamless full-stack applications
-              and a love for the environment
-            </p>
-          </div>
+        <div className="header__title">
+          <h1>HEY, I'm Ollie,</h1>
+        </div>
+        <div className="header__description">
+          <p>
+            a frontend developer from Dorset, UK with a passion for creative
+            technology and nature.
+          </p>
         </div>
       </motion.div>
-      {/* 
-      <motion.div
-        variants={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="header__circles"
-      >
-        {[images.react, images.node, images.python].map((circle, index) => (
-          <div className="circle-cmp" key={`circle-${index}`}>
-            <img src={circle} alt="circle" />
-          </div>
-        ))}
-      </motion.div> */}
     </section>
   );
 };

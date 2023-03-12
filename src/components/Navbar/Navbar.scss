@@ -22,6 +22,7 @@
     border: 1px solid $primary-grey;
     padding: 4px 1rem;
     border-radius: 15px;
+
     &:hover {
       cursor: pointer;
       background-color: $secondary-colour;
@@ -41,7 +42,6 @@
   }
 
   &__links {
-    flex: 1;
     @include flex(row, center, center);
 
     @media screen and (max-width: 900px) {
@@ -56,7 +56,7 @@
 
     &:hover {
       div {
-        background-color: $secondary-colour;
+        background-color: $tertiary-colour;
       }
     }
 
@@ -69,7 +69,7 @@
     }
 
     a {
-      color: $primary-grey;
+      color: $primary-black;
       text-decoration: none;
       flex-direction: column;
       text-transform: uppercase;
@@ -78,14 +78,18 @@
       margin-top: 1rem;
 
       &:hover {
-        color: $secondary-colour;
+        color: $tertiary-colour;
       }
     }
   }
 
   &__logo {
-    width: 150px;
-    opacity: 70%;
+    a {
+      color: $primary-colour;
+      &:hover {
+        color: $tertiary-colour;
+      }
+    }
   }
 
   &__menu {
@@ -163,8 +167,4 @@
       display: none;
     }
   }
-}
-
-.ollie-logo {
-  width: 100%;
 }
