@@ -18,10 +18,6 @@ import { AppWrap } from "../../wrapper";
 const Header = () => {
   return (
     <section className="header">
-      <div className="status">
-        <div className="status__circle"></div>
-        <p className="status__text">READY TO WORK WITH YOU</p>
-      </div>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
